@@ -27,7 +27,7 @@
       vars:
         URL: hosts.example.com
 
- if we declare a variable on task level then only task can access that variable
+# if we declare a variable on task level then only task can access that variable
 
 - name: Inventory variable
   hosts: all
