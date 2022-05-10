@@ -43,5 +43,17 @@
       ansible.builtin.debug:
         msg: Architecture = {{ansible_architecture}}, IP address = {{ansible_eth0.ipv4.address}}
 
+- name : Register variable
+  hosts: all
+  tasks:
+    - name: Run as shell command
+      ansible.builtin.shell: uptime
+      register: OUT
+
+    - name: Print Output of shell command
+      ansible.builtin.debug:
+        msg: "{{OUT}}"
+
+
 
 
