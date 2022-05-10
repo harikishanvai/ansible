@@ -17,3 +17,21 @@
    - name: Print URL
      ansible.builtin.debug:
        msg: URL = {{URL}}
+
+- name: task level variables
+  hosts: all
+  tasks:
+    - name: Print URL
+      ansible.builtin.debug:
+        msg: URL = {{URL}}
+      vars:
+        URL: hosts.example.com
+
+ if we declare a variable on task level then only task can access that variable
+
+- name: Inventory variable
+  hosts: all
+  tasks:
+    - name: Print URL
+      ansible.builtin.debug:
+        msg: URL = {{URL}}
