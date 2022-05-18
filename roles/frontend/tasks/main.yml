@@ -41,7 +41,7 @@
 
 - name: Install Nginx
   ansible.builtin.yum:
-    name: ngnix
+    name: nginx
     state: installed
 
 - name: Download and Extract Frontend
