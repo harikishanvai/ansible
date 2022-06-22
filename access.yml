@@ -1,0 +1,3 @@
+- name: List Access key
+  cmd: "aws iam list-access-keys --output table | grep -E "Inactive" | sort -k"
+  register: list_key
